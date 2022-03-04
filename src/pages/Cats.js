@@ -70,7 +70,7 @@ const Cats = () => {
 
                 <Card
                     title="Luci"
-                    imgWidth={300}
+                    imgWidth={270}
                     imgHeight={350}
                     img='https://lh3.googleusercontent.com/QUT-VHVivt61L0s68lT7typT5vnibFPKXtBZU8TxTkGB4rZbmWHjBq-kza2C9t8AazolvxP5HwZimzDNLR9q-HoQYhZLfk1c-4XMi86DlTuIK3Uv_a7loXqhlMmr3yWxxUr73j5llgg=w2400'
                     desc={`Lumi's sister. An absolute angel, she's got strong vocals 
@@ -82,7 +82,7 @@ const Cats = () => {
 
                 <Card
                     title="Coco"
-                    imgWidth={450}
+                    imgWidth={400}
                     imgHeight={270}
                     img='https://lh3.googleusercontent.com/OnKnq3FVXKmC1qv_4wXfr4QV90FKrxIxFVEpdN1StowpaabFnCgitXHd3u2-ZGg-ENZfnjCTjAYg8QIi07ZcWLFIiW9stMeoKvNixDe_Fj8GROgjMGtNVAkcFzD-3nr4YPYapVdYJqo=w2400'
                     desc={`Our first kitty, comes to visit when family is in (cat) town. 
