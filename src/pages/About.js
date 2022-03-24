@@ -51,7 +51,7 @@ const About = () => {
                     <img className={classes.img} height={300} src={'https://lh3.googleusercontent.com/A_4pRBg2VNDbLsrPe7GYGUfvCLjQOHcQH9oL6fmc-bndAWjcg_m2zmxa8bp8oDlhAmtkAkho-oL0F-8hrxYPocw65JXEaxjJLUECL-qu6iWyfNdkxWI5j81p36CdqAEAhfPoq7PCGrc=w2400'} />
                     <div className={classes.textBodyMedia}>
                         <Typography variant="body2" classes={{ root: classes.typographyBodyRoot }}>
-                            <div>You're probably here for my resume
+                            <div>My resume if you're interested :)
                                 <a href={resume} target='_blank'>
                                     <LaunchIcon sx={{ fontSize: 16 }} />
                                 </a>
@@ -87,7 +87,7 @@ const About = () => {
                         </Typography>
 
                         <Typography variant="body2" classes={{ root: classes.typographyBodyRoot }}>
-                            Enough about me, <a href='/cats'>look at my amazing cats 🐈🐈</a>
+                            Enough about me, <a href='/#/cats'>look at my amazing cats 🐈🐈</a>
                         </Typography>
                     </div>
 

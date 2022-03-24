@@ -1,12 +1,15 @@
 import './App.css';
 import { makeStyles } from '@mui/styles';
-import Typography from "@mui/material/Typography";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  Navigate
 } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Cats from './pages/Cats';
@@ -30,9 +33,20 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     width: '500px',
-    minWidth: '140px',
-    // backgroundColor: 'black'
+    "@media only screen and (max-width: 600px)": {
+      justifyContent: 'center',
+    }
   },
+  mobileMenu: {
+    "@media only screen and (min-width: 600px)": {
+      display: 'none !important'
+    }
+  },
+  // nonMobileNavItems: {
+  //   "@media only screen and (max-width: 600px)": {
+  //     display: 'none !important'
+  //   }
+  // },
   hoverUnderlineAnimation: {
     display: 'inline-block',
     position: 'relative',
@@ -60,21 +74,41 @@ const useStyles = makeStyles({
   }
 })
 
+const menuOptions = [
+  'Home',
+  'About',
+  'Cats'
+]
+
 function App() {
   const classes = useStyles();
   return (
     <div className={classes.app}>
       <Router>
-        <div >
-          <header className={classes.header}>
-            <div className={classes.navBar}>
-              <Link to='/'><code className={classes.hoverUnderlineAnimation}>home</code></Link>
-              <Link to='/about'> <code className={classes.hoverUnderlineAnimation}>about</code></Link>
-              <Link to='/cats'> <code className={classes.hoverUnderlineAnimation}>cats</code></Link>
-            </div>
-          </header>
-        </div>
+        <header className={classes.header}>
+          <nav className={classes.navBar}>
+            <Link to='/' className={classes.nonMobileNavItems}>
+              <code className={classes.hoverUnderlineAnimation}>home</code>
+            </Link>
+            <Link to='/about' className={classes.nonMobileNavItems}>
+              <code className={classes.hoverUnderlineAnimation}>about</code>
+            </Link>
+            <Link to='/cats' className={classes.nonMobileNavItems}>
+              <code className={classes.hoverUnderlineAnimation}>cats</code>
+            </Link>
+            {/* <IconButton
+              className={classes.mobileMenu}
+              size="large"
+              edge="start"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton> */}
+          </nav>
+        </header>
         <Routes>
+          <Route path="/personal-site" element={<Navigate replace to="/" />} />
           <Route path="/cats" element={<Cats />} />
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
